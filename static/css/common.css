@@ -1,0 +1,140 @@
+div.main-content { /* Pad all of our content so it sits below the navbar. */
+  padding-top: 40px;
+}
+
+/* Hide for mobile, show later */
+.sidebar {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .sidebar {
+    position: fixed;
+    top: 41px;
+    bottom: 0;
+    left: 0;
+    z-index: 1000;
+    display: block;
+    padding: 20px;
+    overflow-x: hidden;
+    overflow-y: auto; /* Scrollable contents if viewport is shorter than content. */
+    background-color: #f5f5f5;
+    border-right: 1px solid #eee;
+  }
+}
+
+/* Sidebar navigation */
+.nav-sidebar > ul {
+  margin-right: -21px; /* 20px padding + 1px border */
+  margin-bottom: 20px;
+  margin-left: -20px;
+}
+.nav-sidebar > ul > li > a {
+  padding-right: 20px;
+  padding-left: 20px;
+}
+.nav-sidebar > ul > .active > a,
+.nav-sidebar > ul > .active > a:hover,
+.nav-sidebar > ul > .active > a:focus {
+  color: #fff;
+  background-color: #D9230F;
+}
+
+.nav-sidebar > ul > .nav-subitem > a {
+  padding-left: 2.0em;
+}
+
+.nav-header {
+  padding: 16px 25px;
+}
+
+.navbar-collapse {
+  overflow: hidden;
+}
+
+.navbar-default .navbar-toggle .fa-icon-bar {
+  color: #fff;
+}
+
+.navbar-default .navbar-toggle {
+  padding: 6.72px 9.86px;
+}
+
+/*
+ * Main content
+ */
+
+.main {
+  padding: 20px;
+}
+
+.main .page-header {
+  margin-top: 0;
+}
+
+/*
+ * Login
+ */
+
+.form-login {
+  max-width: 330px;
+  margin: 0 auto;
+}
+.form-login .panel {
+  background-color: #eee;
+}
+.form-login .form-login-heading {
+  text-align: center
+}
+
+.form-login img.img-responsive {
+  max-width: 50%;
+  margin: 0 auto;
+  margin-bottom: 2.0em;
+}
+
+.form-login .checkbox {
+  margin-bottom: 10px;
+}
+.form-login .checkbox {
+  font-weight: normal;
+}
+.form-login .form-control {
+  position: relative;
+  height: auto;
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 10px;
+  font-size: 16px;
+}
+.form-login .form-control:focus {
+  z-index: 2;
+}
+.form-login .form-group {
+  margin-bottom: 0;
+}
+.form-login input[type="text"] {
+  margin-bottom: -1px;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+.form-login input[type="email"] {
+  margin-bottom: -1px;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+.form-login input[type="password"] {
+  margin-bottom: 10px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+
+.login-grid {
+  height: 100%;
+}
+
+.login-form-container {
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
