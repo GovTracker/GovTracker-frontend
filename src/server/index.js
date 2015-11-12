@@ -1,5 +1,5 @@
 'use strict';
-require('babel/register')({
+require('babel-core/register')({
   stage: 0,
 });
 require('./server');
