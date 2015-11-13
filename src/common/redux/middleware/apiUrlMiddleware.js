@@ -11,7 +11,8 @@ export default (pattern, server_rendering) => ({dispatch, getState}) => next => 
   function parseUrl(url, server_rendering) {
     if (server_rendering) {
       // Prepend host and port of the API server to the path.
-      return 'http://localhost' + url;
+      const host = process.env.GOVTRACKER_BASE_HOST != undefined ? process.env.GOVTRACKER_BASE_HOST : 'localhost';
+      return `http://${host}${url}`;
     }
     return url;
   }
