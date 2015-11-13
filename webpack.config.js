@@ -4,6 +4,8 @@ var webpack = require('webpack');
 module.exports = {
   devtool: 'inline-source-map',
   entry: [
+    'babel-core/external-helpers',
+    'babel-core/polyfill',
     'webpack-hot-middleware/client',
     './src/client/index.js'
   ],

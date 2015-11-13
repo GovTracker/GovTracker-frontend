@@ -36,15 +36,15 @@ class App extends React.Component {
               {"name": "viewport", "content": "width=device-width, initial-scale=1"}
             ]}
             link={[
-              {"href": "/static/css/bootstrap.min.css", "rel": "stylesheet"},
-              {"href": "/static/css/font-awesome.min.css", "rel": "stylesheet"},
-              {"href": "/static/css/common.css", "rel": "stylesheet"}
+              {"href": "/static/frontend/css/bootstrap.min.css", "rel": "stylesheet"},
+              {"href": "/static/frontend/css/font-awesome.min.css", "rel": "stylesheet"},
+              {"href": "/static/frontend/css/common.css", "rel": "stylesheet"}
             ]}
           />
           {this.props.children}
-          <script src="/static/js/jquery-2.1.4.min.js"></script>
-          <script src="/static/js/bootstrap.min.js"></script>
-          <script src="/static/js/bundle.js"></script>
+          <script src="/static/frontend/js/jquery-2.1.4.min.js"></script>
+          <script src="/static/frontend/js/bootstrap.min.js"></script>
+          <script src="/static/frontend/js/bundle.js"></script>
         </body>
       </html>
     );

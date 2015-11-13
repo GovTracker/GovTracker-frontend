@@ -30,12 +30,14 @@ const port = 3000;
 const address = '0.0.0.0';
 
 // Use this middleware to set up hot module reloading via webpack.
-const compiler = webpack(webpackConfig);
-app.use(webpackDevMiddleware(compiler, { noInfo: true, publicPath: webpackConfig.output.publicPath }));
-app.use(webpackHotMiddleware(compiler));
+if (process.env.NODE_ENV != 'production') {
+  const compiler = webpack(webpackConfig);
+  app.use(webpackDevMiddleware(compiler, { noInfo: true, publicPath: webpackConfig.output.publicPath }));
+  app.use(webpackHotMiddleware(compiler));
 
-//expose public folder as static assets
-app.use('/static', Express.static(__dirname + '/../../static'));
+  //expose public folder as static assets
+  app.use('/static', Express.static(__dirname + '/../../static'));
+}
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({
